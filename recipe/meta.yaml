@@ -14,7 +14,7 @@ source:
     sha256: 1c84784f881035a9cf0438ff27a66e34c933422d6e9402ca637350d0d20117aa
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install ./pypi -vv"
 
 requirements:
