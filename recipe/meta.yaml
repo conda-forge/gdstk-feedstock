@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     folder: pypi
-    sha256: d5ed69fce359c25d65f9e61fe302496931ae32bca925b9cb6b359dddc5db03d1
+    sha256: 99f4757091d854d822aa153c0a1877ccb17351a81116a778072381bc7e69052a
   - url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
     folder: github
-    sha256: 1c84784f881035a9cf0438ff27a66e34c933422d6e9402ca637350d0d20117aa
+    sha256: b128685fc4049b9248f5231a1ffa0988a8fc6ed7965fe07d51b22d92dbdbb6cc
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install ./pypi -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install ./pypi -vv
 
 requirements:
   build:
@@ -42,7 +42,7 @@ about:
   home: https://github.com/heitzmann/gdstk
   license: BSL-1.0
   license_file: LICENSE.txt
-  summary: 'Gdstk (GDSII Tool Kit) is a C++ library for creation and manipulation of GDSII stream files.'
+  summary: Gdstk (GDSII Tool Kit) is a C++ library for creation and manipulation of GDSII stream files.
 
   description: |
     Gdstk (GDSII Tool Kit) is a C++ library for creation and manipulation of
