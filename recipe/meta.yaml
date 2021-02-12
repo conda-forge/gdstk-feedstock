@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,13 @@ package:
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     folder: pypi
-    sha256: 99f4757091d854d822aa153c0a1877ccb17351a81116a778072381bc7e69052a
+    sha256: 3fed7296ba702015499927eaa8b9acfc4eaa36ebd0be1d2bd59328b049fa2d89
   - url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
     folder: github
-    sha256: b128685fc4049b9248f5231a1ffa0988a8fc6ed7965fe07d51b22d92dbdbb6cc
+    sha256: f4d4493347ad8ffdd635e391b056e32b64e9580b6cc0034d20700910ebbdbf2f
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install ./pypi -vv
 
 requirements:
