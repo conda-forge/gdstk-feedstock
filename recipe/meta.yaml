@@ -8,6 +8,7 @@ package:
 source:
   git_url: https://github.com/heitzmann/gdstk.git
   git_depth: 1
+  folder: github
   # - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   #   folder: pypi
   #   sha256: a2bc3ed4ea05ddb8e6a50da562065c98a307421425a27284c7bdd42cf7508929
@@ -17,7 +18,8 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install ./pypi -vv
+  # script: {{ PYTHON }} -m pip install ./pypi -vv
+  script: {{ PYTHON }} -m pip install -r github/requirements.txt -vv
 
 requirements:
   build:
