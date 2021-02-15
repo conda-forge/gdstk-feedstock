@@ -19,7 +19,7 @@ source:
 build:
   number: 0
   # script: {{ PYTHON }} -m pip install ./pypi -vv
-  script: {{ PYTHON }} -m pip install -r github/requirements.txt -vv
+  script: {{ PYTHON }} -m pip install ./github -vv
 
 requirements:
   build:
