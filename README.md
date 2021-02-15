@@ -7,19 +7,18 @@ Package license: BSL-1.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gdstk-feedstock/blob/master/LICENSE.txt)
 
-Summary: Gdstk (GDSII Tool Kit) is a C++ library for creation and manipulation of GDSII stream files.
+Summary: Gdstk (GDSII Tool Kit) is a C++/Python library for creation and manipulation of GDSII and OASIS files.
 
 Development: https://github.com/heitzmann/gdstk
 
 Documentation: https://heitzmann.github.io/gdstk/
 
 Gdstk (GDSII Tool Kit) is a C++ library for creation and manipulation of
-GDSII stream files. It is also available as a Python module meant to be a
-successor to Gdspy.  Key features for the creation of complex CAD layouts
-are included: 1. Boolean operations on polygons (AND, OR, NOT, XOR) based
-on clipping algorithm; 2. Polygon offset (inward and outward rescaling of
-polygons); and 3. Efficient point-in-polygon solutions for large array
-sets.
+GDSII and OASIS files.  It is also available as a Python module meant to
+be a successor to Gdspy.  Key features for the creation of complex CAD
+layouts are included: boolean operations on polygons (AND, OR, NOT, XOR)
+based on clipping algorithm; polygon offset (inward and outward rescaling
+of polygons); efficient point-in-polygon solutions for large array sets.
 
 
 Current build status
@@ -27,7 +26,6 @@ Current build status
 
 
 <table>
-    
   <tr>
     <td>Azure</td>
     <td>
@@ -253,4 +251,3 @@ Feedstock Maintainers
 
 * [@heitzmann](https://github.com/heitzmann/)
 * [@wshanks](https://github.com/wshanks/)
-
