@@ -20,7 +20,6 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - zlib
-    - liblapack
     - numpy >=1.14
     - python
     - pip
