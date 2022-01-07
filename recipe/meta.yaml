@@ -18,6 +18,7 @@ requirements:
   build:
     - cmake >=3.14.0
     - {{ compiler('cxx') }}
+    - make
   host:
     - zlib
     - numpy >=1.14
