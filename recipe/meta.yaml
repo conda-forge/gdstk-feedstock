@@ -11,7 +11,7 @@ source:
   sha256: 257b665cda27bef6e85d5df5d33277377e50c24c958a1302ad65978bee7f49e6
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
