@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.9.37" %}
+{% set version = "0.9.38" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
   folder: gdstk
-  sha256: f39934d7bea8430b8efeca90187f295845302ffae25a98a0a58b034fd005b587
+  sha256: 931b3df101a64dbd5ba1135f708d4ec13bf76e9c46baed901928297e1eec7418
 
 build:
   number: 0
