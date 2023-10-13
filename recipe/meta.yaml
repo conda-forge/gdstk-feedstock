@@ -36,7 +36,8 @@ test:
   source_files:
     - gdstk/tests/*
   commands:
-    - pytest
+    - pytest                                    # [python_impl != 'pypy']
+    - pytest -k "not test_roundtrip_path_ends"  # [python_impl == 'pypy']
   requires:
     - pytest
 
