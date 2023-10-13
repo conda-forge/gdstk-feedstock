@@ -23,10 +23,11 @@ requirements:
     - {{ compiler('cxx') }}
     - make
   host:
-    - zlib
     - numpy
     - python
     - pip
+    - qhull
+    - zlib
   run:
     - {{ pin_compatible('numpy') }}
     - python
