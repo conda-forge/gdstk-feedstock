@@ -27,6 +27,7 @@ requirements:
     - numpy
     - python
     - pip
+    - qhull
   run:
     - {{ pin_compatible('numpy') }}
     - python
