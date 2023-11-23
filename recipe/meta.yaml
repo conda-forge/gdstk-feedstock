@@ -11,7 +11,7 @@ source:
   sha256: 81af218feea569c9e113914ab9a704ad06d87f7c21ad486ab1ae9e1f2e59100d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
@@ -31,6 +31,7 @@ requirements:
   run:
     - {{ pin_compatible('numpy') }}
     - python
+    - typing-extensions  # [py<311]
 
 test:
   source_files:
