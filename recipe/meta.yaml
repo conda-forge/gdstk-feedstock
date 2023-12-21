@@ -24,13 +24,15 @@ requirements:
     - make
   host:
     - numpy
-    - python
+    - python >=3.8
     - pip
+    - setuptools >=42
     - qhull
+    - wheel
     - zlib
   run:
     - {{ pin_compatible('numpy') }}
-    - python
+    - python >=3.8
     - typing-extensions  # [py<311]
 
 test:
