@@ -24,7 +24,7 @@ requirements:
     - make
   host:
     - numpy
-    - python >=3.8
+    - python
     - pip
     - setuptools >=42
     - qhull
@@ -32,7 +32,7 @@ requirements:
     - zlib
   run:
     - {{ pin_compatible('numpy') }}
-    - python >=3.8
+    - python
     - typing-extensions  # [py<311]
 
 test:
