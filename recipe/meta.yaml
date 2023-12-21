@@ -11,7 +11,7 @@ source:
   sha256: 287d9c4af0770cff9697273b24dbd0aa007e4ba86656832517d6d3d2c3587425
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
@@ -26,7 +26,9 @@ requirements:
     - numpy
     - python
     - pip
+    - setuptools >=42
     - qhull
+    - wheel
     - zlib
   run:
     - {{ pin_compatible('numpy') }}
