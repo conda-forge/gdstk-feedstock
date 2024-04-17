@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.9.50" %}
+{% set version = "0.9.51" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
   folder: gdstk
-  sha256: 9137935a658e726d93d448624401b1ff8ee4ff6c1a3fa9fd397fc0825dfbfb0a
+  sha256: 158137feb21205510d0eaaa1ba38505d47e2a5e67a81fff122291c6f062b91b4
   patches:
     # Undo CMakeLists.txt to avoid build error
     - ./0001-Remove-macOS-change-to-CMakeLists.txt.patch
@@ -22,14 +22,14 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - cmake >=3.14.0
+    - cmake >=3.26.0
     - {{ compiler('cxx') }}
     - make
   host:
     - numpy
     - python
     - pip
-    - setuptools >=42
+    - scikit-build-core
     - qhull
     - wheel
     - zlib
