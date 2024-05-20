@@ -14,7 +14,7 @@ source:
     - ./0001-Remove-macOS-change-to-CMakeLists.txt.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake >=3.26.0
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - numpy
@@ -34,7 +35,6 @@ requirements:
     - wheel
     - zlib
   run:
-    - {{ pin_compatible('numpy') }}
     - python
     - typing-extensions  # [py<311]
 
