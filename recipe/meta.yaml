@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.9.52" %}
+{% set version = "0.9.53" %}
 
 package:
   name: {{ name|lower }}
@@ -8,13 +8,14 @@ package:
 source:
   url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
   folder: gdstk
-  sha256: 1369ab198b946018e3fdae1267296fc47c047b4fc9ffd059a59955406c1b1394
+  sha256: 8fdf85e9e90838720ff1d3555e5b880868cbc18a919261f317772b0327457be0
   patches:
     # Undo CMakeLists.txt to avoid build error
     - ./0001-Remove-macOS-change-to-CMakeLists.txt.patch
 
 build:
   number: 0
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
