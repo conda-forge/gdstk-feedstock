@@ -15,6 +15,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
