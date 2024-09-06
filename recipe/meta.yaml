@@ -14,7 +14,7 @@ source:
     - ./0001-Remove-macOS-change-to-CMakeLists.txt.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install ./gdstk -vv
 
