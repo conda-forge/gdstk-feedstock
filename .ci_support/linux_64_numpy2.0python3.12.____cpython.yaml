@@ -21,7 +21,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.12.* *_cpython
 python_impl:
 - cpython
 qhull:
@@ -34,5 +34,6 @@ zip_keys:
 - - python
   - numpy
   - python_impl
+  - channel_sources
 zlib:
 - '1'
