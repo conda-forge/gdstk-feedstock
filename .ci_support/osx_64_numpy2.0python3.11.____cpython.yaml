@@ -30,10 +30,11 @@ qhull:
 - '2020.2'
 target_platform:
 - osx-64
+tk:
+- '8.6'
 zip_keys:
 - - python
   - numpy
   - python_impl
-  - channel_sources
 zlib:
 - '1'
