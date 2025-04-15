@@ -1,5 +1,5 @@
 {% set name = "gdstk" %}
-{% set version = "0.9.59" %}
+{% set version = "0.9.60" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
   folder: gdstk
-  sha256: 4f9507591cea50d0294be6d79ae8943c20fce76150efef3a4b8a0dde476eed23
+  sha256: 20611e4902b4d9b1c35e82d84d3bba68303795fcc6932eff0827f275d70b9131
   patches:
     # Undo CMakeLists.txt to avoid build error
     - ./0001-Remove-macOS-change-to-CMakeLists.txt.patch
