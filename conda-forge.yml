@@ -9,7 +9,7 @@ conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-test: native_and_emulated
 remote_ci_setup:
-  - conda-forge-ci-setup=4
-  - conda-build <24.11
+- conda-forge-ci-setup=4
+- conda-build <24.11
+test: native_and_emulated
