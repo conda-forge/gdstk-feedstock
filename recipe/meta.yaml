@@ -9,6 +9,9 @@ source:
   url: https://github.com/heitzmann/{{ name }}/archive/v{{ version }}.tar.gz
   folder: gdstk
   sha256: 7819120177050db4ef8bd3394158c7cecc4555640d50f634f957eafdcbcd7984
+  patches:
+    - ./0001-Remove-unconditional-setting-of-CMAKE_OSX_ARCHITECTU.patch
+
 
 build:
   number: 0
