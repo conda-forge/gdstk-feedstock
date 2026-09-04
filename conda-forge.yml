@@ -10,6 +10,7 @@ github:
   branch_name: main
   tooling_branch_name: main
 remote_ci_setup:
-- conda-forge-ci-setup=4
-- conda-build <24.11
+  - conda-forge-ci-setup=4
+  - conda-build <24.11
 test: native_and_emulated
+conda_build_tool: rattler-build
