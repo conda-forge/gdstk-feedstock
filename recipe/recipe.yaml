@@ -17,17 +17,15 @@ source:
 
 build:
   number: 1
-  skip: match(python, "<3.9")
   script: ${{ PYTHON }} -m pip install ./gdstk -vv
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: numpy
+      then:
+        - cross-python_${{ target_platform }}
+        - numpy
+        - python
     - cmake >=3.26.0
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
@@ -44,8 +42,6 @@ requirements:
     - typing_extensions
     - numpy
     - python
-    - if: match(python, "<3.11")
-      then: typing-extensions
 
 tests:
   - files:
@@ -55,10 +51,7 @@ tests:
       run:
         - pytest
     script:
-      - if: python_impl != 'pypy'
-        then: pytest
-      - if: python_impl == 'pypy'
-        then: pytest -k "not test_roundtrip_path_ends"
+      - pytest
 
 about:
   license: BSL-1.0
