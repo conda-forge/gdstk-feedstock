@@ -41,7 +41,7 @@ if !errorlevel! neq 0 exit /b !errorlevel!
 echo Creating environment
 call "%MICROMAMBA_EXE%" create --yes --root-prefix "%MAMBA_ROOT_PREFIX%" --prefix "%MINIFORGE_HOME%" ^
     --channel conda-forge ^
-    pip rattler-build conda-forge-ci-setup=4 "conda-build <24.11"
+    pip rattler-build conda-forge-ci-setup=4 "conda-build>=26.3"
 if !errorlevel! neq 0 exit /b !errorlevel!
 
 echo Cleaning up micromamba
